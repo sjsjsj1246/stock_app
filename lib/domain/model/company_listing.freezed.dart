@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'compay_listing.dart';
+part of 'company_listing.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,35 +14,35 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-CompayListing _$CompayListingFromJson(Map<String, dynamic> json) {
-  return _CompayListing.fromJson(json);
+CompanyListing _$CompanyListingFromJson(Map<String, dynamic> json) {
+  return _CompanyListing.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CompayListing {
+mixin _$CompanyListing {
   String get symbol => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get exchange => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CompayListingCopyWith<CompayListing> get copyWith =>
+  $CompanyListingCopyWith<CompanyListing> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CompayListingCopyWith<$Res> {
-  factory $CompayListingCopyWith(
-          CompayListing value, $Res Function(CompayListing) then) =
-      _$CompayListingCopyWithImpl<$Res, CompayListing>;
+abstract class $CompanyListingCopyWith<$Res> {
+  factory $CompanyListingCopyWith(
+          CompanyListing value, $Res Function(CompanyListing) then) =
+      _$CompanyListingCopyWithImpl<$Res, CompanyListing>;
   @useResult
   $Res call({String symbol, String name, String exchange});
 }
 
 /// @nodoc
-class _$CompayListingCopyWithImpl<$Res, $Val extends CompayListing>
-    implements $CompayListingCopyWith<$Res> {
-  _$CompayListingCopyWithImpl(this._value, this._then);
+class _$CompanyListingCopyWithImpl<$Res, $Val extends CompanyListing>
+    implements $CompanyListingCopyWith<$Res> {
+  _$CompanyListingCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -74,22 +74,22 @@ class _$CompayListingCopyWithImpl<$Res, $Val extends CompayListing>
 }
 
 /// @nodoc
-abstract class _$$_CompayListingCopyWith<$Res>
-    implements $CompayListingCopyWith<$Res> {
-  factory _$$_CompayListingCopyWith(
-          _$_CompayListing value, $Res Function(_$_CompayListing) then) =
-      __$$_CompayListingCopyWithImpl<$Res>;
+abstract class _$$_CompanyListingCopyWith<$Res>
+    implements $CompanyListingCopyWith<$Res> {
+  factory _$$_CompanyListingCopyWith(
+          _$_CompanyListing value, $Res Function(_$_CompanyListing) then) =
+      __$$_CompanyListingCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String symbol, String name, String exchange});
 }
 
 /// @nodoc
-class __$$_CompayListingCopyWithImpl<$Res>
-    extends _$CompayListingCopyWithImpl<$Res, _$_CompayListing>
-    implements _$$_CompayListingCopyWith<$Res> {
-  __$$_CompayListingCopyWithImpl(
-      _$_CompayListing _value, $Res Function(_$_CompayListing) _then)
+class __$$_CompanyListingCopyWithImpl<$Res>
+    extends _$CompanyListingCopyWithImpl<$Res, _$_CompanyListing>
+    implements _$$_CompanyListingCopyWith<$Res> {
+  __$$_CompanyListingCopyWithImpl(
+      _$_CompanyListing _value, $Res Function(_$_CompanyListing) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_CompayListingCopyWithImpl<$Res>
     Object? name = null,
     Object? exchange = null,
   }) {
-    return _then(_$_CompayListing(
+    return _then(_$_CompanyListing(
       symbol: null == symbol
           ? _value.symbol
           : symbol // ignore: cast_nullable_to_non_nullable
@@ -118,12 +118,12 @@ class __$$_CompayListingCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CompayListing implements _CompayListing {
-  const _$_CompayListing(
+class _$_CompanyListing implements _CompanyListing {
+  const _$_CompanyListing(
       {required this.symbol, required this.name, required this.exchange});
 
-  factory _$_CompayListing.fromJson(Map<String, dynamic> json) =>
-      _$$_CompayListingFromJson(json);
+  factory _$_CompanyListing.fromJson(Map<String, dynamic> json) =>
+      _$$_CompanyListingFromJson(json);
 
   @override
   final String symbol;
@@ -134,14 +134,14 @@ class _$_CompayListing implements _CompayListing {
 
   @override
   String toString() {
-    return 'CompayListing(symbol: $symbol, name: $name, exchange: $exchange)';
+    return 'CompanyListing(symbol: $symbol, name: $name, exchange: $exchange)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompayListing &&
+            other is _$_CompanyListing &&
             (identical(other.symbol, symbol) || other.symbol == symbol) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.exchange, exchange) ||
@@ -155,25 +155,25 @@ class _$_CompayListing implements _CompayListing {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CompayListingCopyWith<_$_CompayListing> get copyWith =>
-      __$$_CompayListingCopyWithImpl<_$_CompayListing>(this, _$identity);
+  _$$_CompanyListingCopyWith<_$_CompanyListing> get copyWith =>
+      __$$_CompanyListingCopyWithImpl<_$_CompanyListing>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompayListingToJson(
+    return _$$_CompanyListingToJson(
       this,
     );
   }
 }
 
-abstract class _CompayListing implements CompayListing {
-  const factory _CompayListing(
+abstract class _CompanyListing implements CompanyListing {
+  const factory _CompanyListing(
       {required final String symbol,
       required final String name,
-      required final String exchange}) = _$_CompayListing;
+      required final String exchange}) = _$_CompanyListing;
 
-  factory _CompayListing.fromJson(Map<String, dynamic> json) =
-      _$_CompayListing.fromJson;
+  factory _CompanyListing.fromJson(Map<String, dynamic> json) =
+      _$_CompanyListing.fromJson;
 
   @override
   String get symbol;
@@ -183,6 +183,6 @@ abstract class _CompayListing implements CompayListing {
   String get exchange;
   @override
   @JsonKey(ignore: true)
-  _$$_CompayListingCopyWith<_$_CompayListing> get copyWith =>
+  _$$_CompanyListingCopyWith<_$_CompanyListing> get copyWith =>
       throw _privateConstructorUsedError;
 }
