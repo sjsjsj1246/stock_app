@@ -12,7 +12,7 @@ extension ToCompanyListing on CompanyListingEntity {
 }
 
 extension ToCompanyListingEntity on CompanyListing {
-  CompanyListingEntity toCompanyListing() {
+  CompanyListingEntity toCompanyListingEntity() {
     return CompanyListingEntity(
       symbol: symbol,
       name: name,
