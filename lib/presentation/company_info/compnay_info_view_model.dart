@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:stock_app/domain/model/company_info.dart';
 import 'package:stock_app/domain/repository/stock_repository.dart';
 import 'package:stock_app/presentation/company_info/company_info_state.dart';
 
@@ -28,6 +27,22 @@ class CompanyInfoViewModel with ChangeNotifier {
     }, error: (e) {
       _state = state.copyWith(
         companyInfo: null,
+        isLoading: false,
+        errorMessage: e.toString(),
+      );
+    });
+    notifyListeners();
+
+    final intradayInfo = await _repository.getIntradayInfo(symbol);
+    intradayInfo.when(success: (intradayInfo) {
+      _state = state.copyWith(
+        stockInfos: intradayInfo,
+        isLoading: false,
+        errorMessage: null,
+      );
+    }, error: (e) {
+      _state = state.copyWith(
+        stockInfos: [],
         isLoading: false,
         errorMessage: e.toString(),
       );

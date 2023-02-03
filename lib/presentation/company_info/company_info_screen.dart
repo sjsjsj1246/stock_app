@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:stock_app/domain/model/company_info.dart';
+import 'package:stock_app/presentation/company_info/company_info_state.dart';
 import 'package:stock_app/presentation/company_info/compnay_info_view_model.dart';
+import 'package:stock_app/presentation/company_info/components/stock_chart.dart';
 
 class CompanyInfoScreen extends StatelessWidget {
   const CompanyInfoScreen({super.key});
@@ -24,14 +26,16 @@ class CompanyInfoScreen extends StatelessWidget {
                 child: CircularProgressIndicator(),
               ),
             if (!state.isLoading && state.errorMessage == null)
-              _buildBody(state.companyInfo!)
+              _buildBody(state, context)
           ],
         ),
       ),
     );
   }
 
-  Widget _buildBody(CompanyInfo companyInfo) {
+  Widget _buildBody(CompanyInfoState state, BuildContext context) {
+    CompanyInfo companyInfo = state.companyInfo!;
+
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -58,6 +62,19 @@ class CompanyInfoScreen extends StatelessWidget {
         Text(
           companyInfo.description,
           style: const TextStyle(fontSize: 12),
+        ),
+        const SizedBox(height: 16),
+        const Text(
+          '주가 그래프',
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(
+          height: 16,
+        ),
+        StockChart(
+          infos: state.stockInfos,
+          graphColor: Theme.of(context).colorScheme.primary,
+          textColor: Theme.of(context).colorScheme.onSurface,
         ),
       ]),
     );
